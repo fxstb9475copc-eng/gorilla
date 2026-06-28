@@ -150,8 +150,19 @@ QRコードを読み取ると、ここにパズルのピースがはまるよ！
 ★展望売店<br>
 ★正門売店<br>
 ★ウータンカフェ<br>
-お会計の際、この画面をスタッフに見せてね！
-</div
+お会計の際、この画面をスタッフに見せてね！<br><br>
+
+<button id="use-btn" style="
+padding: 10px 20px;
+background: #e53e3e;
+color: white;
+border: none;
+border-radius: 8px;
+font-size: 16px;
+">
+使用済みにする 
+</button>
+</div>
 </div>
 </div>
 
@@ -201,7 +212,7 @@ if (used === 'true') {
     <p class="coupon-title">このクーポンは使用済みです</p>
   `;
 }
-</script>
+<script>
 // 使用済みにするボタン
 const btn = document.getElementById('use-btn');
 if (btn) {
