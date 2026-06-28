@@ -192,6 +192,24 @@ if (myStamps.length === 4) {
 document.getElementById('info-box').style.display = 'none';
 document.getElementById('complete-zone').style.display = 'block';
 }
+</script> 
+<script>
+// ★使用済みチェック
+const used = localStorage.getItem('coupon_used');
+if (used === 'true') {
+  document.getElementById('complete-zone').innerHTML = `
+    <p class="coupon-title">このクーポンは使用済みです</p>
+  `;
+}
+</script>
+// 使用済みにするボタン
+const btn = document.getElementById('use-btn');
+if (btn) {
+  btn.addEventListener('click', () => {
+    localStorage.setItem('coupon_used', 'true');
+    location.reload();
+  });
+}
 </script>
 
 </body>
